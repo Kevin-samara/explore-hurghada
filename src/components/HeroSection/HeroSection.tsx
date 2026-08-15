@@ -5,6 +5,8 @@ import { useLanguage } from '../../hooks/useLanguage';
 import BubbleAnimation from '../BubbleAnimation/BubbleAnimation';
 import './HeroSection.css';
 
+const imagePath = (path: string) => `${import.meta.env.BASE_URL}${path}`;
+
 const HeroSection: React.FC = () => {
   const { lang, isRTL } = useLanguage();
   const Arrow = isRTL ? ArrowLeft : ArrowRight;
@@ -87,7 +89,7 @@ const HeroSection: React.FC = () => {
         {/* Hero decorative card */}
         <div className="hero__card glass-card float">
           <img
-            src="/images/trips/airport-transfers.jpg"
+            src={imagePath('images/trips/airport-transfers.jpg')}
             alt={lang === 'ar' ? 'نقل المطار الفاخر' : 'Airport Transfer Luxury Service'}
             className="hero__card-image"
           />

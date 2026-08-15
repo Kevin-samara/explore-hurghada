@@ -5,6 +5,8 @@ import SectionTitle from '../SectionTitle/SectionTitle';
 import siteConfig from '../../config/site.config';
 import './TransferRoutesWidget.css';
 
+const imagePath = (path: string) => `${import.meta.env.BASE_URL}${path}`;
+
 interface RouteCardData {
   id: string;
   destination: string;
@@ -27,7 +29,7 @@ const POPULAR_ROUTES: RouteCardData[] = [
     destinationAr: 'مطار الغردقة ➔ الجونة',
     tag: 'Popular Resort',
     tagAr: 'المنتجع الأكثر طلباً',
-    image: '/images/trips/airport-transfers.jpg',
+    image: imagePath('images/trips/el-gouna-route.jpg'),
     duration: '30 mins',
     durationAr: '30 دقيقة',
     sedanPrice: '18 €',
@@ -41,7 +43,7 @@ const POPULAR_ROUTES: RouteCardData[] = [
     destinationAr: 'مطار الغردقة ➔ ماكادي باي',
     tag: 'Quick Airport Shuttle',
     tagAr: 'توصيل سريع للمطار',
-    image: '/images/trips/airport-transfers.jpg',
+    image: imagePath('images/trips/makadi-bay-route.jpg'),
     duration: '25 mins',
     durationAr: '25 دقيقة',
     sedanPrice: '18 €',
@@ -55,7 +57,7 @@ const POPULAR_ROUTES: RouteCardData[] = [
     destinationAr: 'مطار الغردقة ➔ سوما باي',
     tag: 'Executive Transfer',
     tagAr: 'نقل فاخر ومريح',
-    image: '/images/trips/airport-transfers.jpg',
+    image: imagePath('images/trips/soma-bay-route.jpg'),
     duration: '45 mins',
     durationAr: '45 دقيقة',
     sedanPrice: '25 €',
@@ -69,7 +71,7 @@ const POPULAR_ROUTES: RouteCardData[] = [
     destinationAr: 'الغردقة ➔ الأقصر (سائق خاص طوال اليوم)',
     tag: 'Inter-City Tour',
     tagAr: 'رحلة بين المدن',
-    image: '/images/trips/luxor-day-trip.jpg',
+    image: imagePath('images/trips/luxor-day-trip.jpg'),
     duration: '3.5 hrs',
     durationAr: '3.5 ساعات',
     sedanPrice: '120 €',

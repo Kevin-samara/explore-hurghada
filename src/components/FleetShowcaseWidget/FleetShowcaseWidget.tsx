@@ -4,6 +4,8 @@ import { useLanguage } from '../../hooks/useLanguage';
 import SectionTitle from '../SectionTitle/SectionTitle';
 import './FleetShowcaseWidget.css';
 
+const imagePath = (path: string) => `${import.meta.env.BASE_URL}${path}`;
+
 interface VehicleType {
   id: string;
   name: string;
@@ -30,7 +32,7 @@ const VEHICLES: VehicleType[] = [
     paxAr: '1 - 3 ركاب',
     luggage: 'up to 3 Suitcases',
     luggageAr: 'حتى 3 حقائب',
-    image: '/images/trips/airport-transfers.jpg',
+    image: imagePath('images/trips/airport-transfers.jpg'),
     features: ['Air-Conditioning', 'Clean & Sanitized', 'Complimentary Bottled Water', 'Flight Tracking'],
     featuresAr: ['تكييف هواء ممتاز', 'نظيفة ومعقمة بالكامل', 'مياه معبأة مجانية', 'متابعة حركة الطيران'],
   },
@@ -44,7 +46,7 @@ const VEHICLES: VehicleType[] = [
     paxAr: '4 - 8 ركاب',
     luggage: 'up to 8 Large Suitcases',
     luggageAr: 'حتى 8 حقائب كبيرة',
-    image: '/images/trips/airport-transfers.jpg',
+    image: imagePath('images/trips/airport-transfers.jpg'),
     features: ['High Roof & Spacous Seats', 'Extra Large Luggage Boot', 'Rear AC Vents', 'Child Seat On Request'],
     featuresAr: ['سقف مرتفع ومقاعد واسعة', 'مساحة حقائب ضخمة', 'فتحات تكييف خلفية', 'مقعد أطفال عند الطلب'],
   },

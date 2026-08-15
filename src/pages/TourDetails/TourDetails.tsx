@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import {
-  Star, Clock, MapPin, Check, X, ArrowLeft, ArrowRight,
-  ChevronLeft, ChevronRight, Calendar,
+  Star, Clock, MapPin, Check, X, ArrowLeft, ArrowRight, Calendar,
 } from 'lucide-react';
 import { useLanguage } from '../../hooks/useLanguage';
 import { t } from '../../i18n/translations';
@@ -13,7 +12,6 @@ import './TourDetails.css';
 const TourDetails: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const { lang, isRTL } = useLanguage();
-  const [activeImage, setActiveImage] = useState(0);
   const [showBooking, setShowBooking] = useState(false);
 
   const trip = trips.find((tr) => tr.id === id);
@@ -40,18 +38,15 @@ const TourDetails: React.FC = () => {
   const included = lang === 'ar' ? trip.includedAr : trip.included;
   const excluded = lang === 'ar' ? trip.excludedAr : trip.excluded;
 
-  const allImages = [trip.image, ...trip.gallery].filter(Boolean);
   const BackArrow = isRTL ? ArrowRight : ArrowLeft;
 
-  const prevImg = () => setActiveImage((i) => (i - 1 + allImages.length) % allImages.length);
-  const nextImg = () => setActiveImage((i) => (i + 1) % allImages.length);
 
   return (
     <main className="tour-page">
       {/* Hero Image */}
       <section className="tour-hero">
         <img
-          src={allImages[activeImage]}
+	        src={trip.image}
           alt={title}
           className="tour-hero__image"
         />
@@ -63,17 +58,7 @@ const TourDetails: React.FC = () => {
           {t(lang, 'tourDetails.backToTrips')}
         </Link>
 
-        {/* Image nav */}
-        {allImages.length > 1 && (
-          <>
-            <button className="tour-hero__nav tour-hero__nav--prev" onClick={isRTL ? nextImg : prevImg}>
-              <ChevronLeft size={20} />
-            </button>
-            <button className="tour-hero__nav tour-hero__nav--next" onClick={isRTL ? prevImg : nextImg}>
-              <ChevronRight size={20} />
-            </button>
-          </>
-        )}
+       
 
         {/* Hero info overlay */}
         <div className="tour-hero__info container">
@@ -99,25 +84,7 @@ const TourDetails: React.FC = () => {
         </div>
       </section>
 
-      {/* Thumbnail strip */}
-      {allImages.length > 1 && (
-        <div className="tour-thumbnails">
-          <div className="container">
-            <div className="tour-thumbnails__strip">
-              {allImages.map((img, i) => (
-                <button
-                  key={i}
-                  className={`tour-thumb ${activeImage === i ? 'tour-thumb--active' : ''}`}
-                  onClick={() => setActiveImage(i)}
-                  aria-label={`View image ${i + 1}`}
-                >
-                  <img src={img} alt="" loading="lazy" />
-                </button>
-              ))}
-            </div>
-          </div>
-        </div>
-      )}
+      
 
       {/* Main content */}
       <div className="tour-body">

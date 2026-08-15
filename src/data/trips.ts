@@ -1,5 +1,6 @@
 import type { Trip } from '../types';
 
+const imagePath = (path: string) => `${import.meta.env.BASE_URL}${path}`;
 export const trips: Trip[] = [
   // ─────────────────────────────────────────
   // 1. Boat Trips
@@ -13,7 +14,7 @@ export const trips: Trip[] = [
     descriptionAr:
       'اكتشف جمال البحر الأحمر مع رحلات بحرية لا تُنسى إلى أفضل الوجهات حول الغردقة. اسبح وتمتع بالسنوركلينج والاسترخاء في المياه الفيروزية الصافية.',
     category: 'sea',
-    image: '/images/trips/boat-trips.jpg',
+image: imagePath('images/trips/boat-trips.jpg'),
     gallery: [
       'https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=1200&q=80',
       'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=80',
@@ -129,7 +130,7 @@ export const trips: Trip[] = [
     descriptionAr:
       'استمتع بمغامرة فريدة إلى بيت الدولفين وتجربة رؤية الدلافين في موطنها الطبيعي. تسبح جانب دلافين سبينر في أحد أكثر الأماكن سحراً في البحر الأحمر.',
     category: 'sea',
-    image: '/images/trips/dolphin-house.jpg',
+image: imagePath('images/trips/dolphin-house.jpg'),
     gallery: [
       'https://images.unsplash.com/photo-1559827291-72ee739d0d9a?w=1200&q=80',
       'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1200&q=80',
@@ -184,7 +185,7 @@ export const trips: Trip[] = [
     descriptionAr:
       'عش تجربة الصحراء المصرية مع ركوب الدراجات الرباعية والجمال والثقافة البدوية ومناظر الغروب الرائعة. مغامرة مسائية لا تُنسى في الصحراء الذهبية حول الغردقة.',
     category: 'safari',
-    image: '/images/trips/desert-safari.jpg',
+image: imagePath('images/trips/desert-safari.jpg'),
     gallery: [
       'https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=1200&q=80',
       'https://images.unsplash.com/photo-1561101143-1b6f2a4e1f34?w=1200&q=80',
@@ -241,7 +242,7 @@ export const trips: Trip[] = [
     descriptionAr:
       'نقل مريح وموثوق بين مطار الغردقة وفندقك. يضمن سائقونا المحترفون وصولاً أو مغادرةً سلسة ودقيقة وخالية من التوتر.',
     category: 'transfer',
-    image: '/images/trips/airport-transfers.jpg',
+image: imagePath('images/trips/airport-transfers.jpg'),
     gallery: [
       'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&q=80',
     ],
@@ -292,7 +293,7 @@ export const trips: Trip[] = [
     descriptionAr:
       'اكتشف اثنين من أقدم الأديرة المسيحية في العالم. استكشف تاريخهم الغني ومعمارهم المذهل ومحيطهم الصحراوي الهادئ في رحلة يوم غنية روحياً وتاريخياً.',
     category: 'safari',
-    image: '/images/trips/saint-anthony-paul.jpg',
+image: imagePath('images/trips/saint-anthony-paul.jpg'),
     gallery: [
       'https://images.unsplash.com/photo-1539667099972-0d6e1b284b00?w=1200&q=80',
       'https://images.unsplash.com/photo-1519817650390-64a993880e64?w=1200&q=80',
@@ -347,7 +348,7 @@ export const trips: Trip[] = [
     descriptionAr:
       'استمتع بمغامرة ركوب الخيل على طول الشاطئ أو عبر الصحراء مع مناظر الغردقة الخلابة. مناسب للمبتدئين والفرسان ذوي الخبرة.',
     category: 'safari',
-    image: '/images/trips/horse-riding.jpg',
+image: imagePath('images/trips/horse-riding.jpg'),
     gallery: [
       'https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?w=1200&q=80',
       'https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=1200&q=80',
@@ -399,7 +400,7 @@ export const trips: Trip[] = [
     descriptionAr:
       'سافر عبر الزمن واستكشف عجائب مصر القديمة بما فيها المعابد الرائعة والمقابر الملكية والمعالم التاريخية في الأقصر — أعظم متحف مفتوح في العالم.',
     category: 'safari',
-    image: '/images/trips/luxor-day-trip.jpg',
+image: imagePath('images/trips/luxor-day-trip.jpg'),
     gallery: [
       'https://images.unsplash.com/photo-1568322445389-f64ac2515020?w=1200&q=80',
       'https://images.unsplash.com/photo-1539667099972-0d6e1b284b00?w=1200&q=80',
@@ -458,7 +459,7 @@ export const trips: Trip[] = [
     descriptionAr:
       'تجربة جمال البحر الأحمر تحت الماء دون ابتلال من خلال أسطح المشاهدة البانورامية تحت الماء. مثالي لجميع الأعمار — لا يلزم السباحة.',
     category: 'sea',
-    image: '/images/trips/sea-scope.jpg',
+image: imagePath('images/trips/sea-scope.jpg'),
     gallery: [
       'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=80',
       'https://images.unsplash.com/photo-1559827291-72ee739d0d9a?w=1200&q=80',
@@ -509,7 +510,7 @@ export const trips: Trip[] = [
     descriptionAr:
       'استرخِ على شواطئ رملية بيضاء بكر، واسبح في مياه صافية كالكريستال، واستمتع بإحدى أشهر وجهات الجزر في البحر الأحمر. هروب مثالي ليوم كامل من المدينة.',
     category: 'sea',
-    image: '/images/trips/orange-island.jpg',
+image: imagePath('images/trips/orange-island.jpg'),
     gallery: [
       'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=80',
       'https://images.unsplash.com/photo-1471922694854-ff1b63b20054?w=1200&q=80',
@@ -564,7 +565,7 @@ export const trips: Trip[] = [
     descriptionAr:
       'أمضِ يوماً ممتعاً في أحد أكبر الملاهي المائية في مصر، مع أحواض الأمواج والشرائح المثيرة والألعاب لجميع الأعمار. يوم عائلي مثالي في الغردقة.',
     category: 'sea',
-    image: '/images/trips/makadi-water-world.jpg',
+image: imagePath('images/trips/makadi-water-world.jpg'),
     gallery: [
       'https://images.unsplash.com/photo-1561043433-aaf687c4cf04?w=1200&q=80',
       'https://images.unsplash.com/photo-1578762560042-46ad127c95ea?w=1200&q=80',
