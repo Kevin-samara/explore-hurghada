@@ -1,0 +1,101 @@
+/* ═══════════════════════════════════════════════════════════════
+   EXPLORE HURGHADA — CSS DESIGN SYSTEM
+   ═══════════════════════════════════════════════════════════════ */
+
+:root {
+  /* ── Color Palette ── */
+  --color-ocean-deep:    #006D7A;
+  --color-ocean-cyan:    #00B8C8;
+  --color-bright-aqua:   #39D9E8;
+  --color-light-aqua:    #9DEFF4;
+  --color-cta:           #FF5B4D;
+  --color-cta-hover:     #FF3B2D;
+  --color-dark-navy:     #063B4A;
+  --color-darker-navy:   #021E28;
+  --color-white:         #FFFFFF;
+  --color-text-primary:  rgba(255,255,255,0.95);
+  --color-text-secondary:rgba(255,255,255,0.70);
+  --color-text-muted:    rgba(255,255,255,0.50);
+
+  /* ── Glassmorphism Tokens ── */
+  --glass-bg:            rgba(255,255,255,0.10);
+  --glass-bg-strong:     rgba(255,255,255,0.18);
+  --glass-bg-dark:       rgba(6,59,74,0.55);
+  --glass-bg-card:       rgba(0,109,122,0.20);
+  --glass-border:        rgba(255,255,255,0.22);
+  --glass-border-strong: rgba(255,255,255,0.40);
+  --glass-blur:          blur(16px);
+  --glass-blur-strong:   blur(24px);
+  --glass-shadow:        0 8px 32px rgba(0,30,40,0.35);
+  --glass-shadow-lg:     0 20px 60px rgba(0,30,40,0.50);
+  --glass-glow:          0 0 30px rgba(57,217,232,0.25);
+  --glass-glow-strong:   0 0 40px rgba(57,217,232,0.45);
+
+  /* ── Spacing ── */
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  20px;
+  --space-6:  24px;
+  --space-8:  32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+  --space-32: 128px;
+
+  /* ── Border Radius ── */
+  --radius-sm:   8px;
+  --radius-md:   16px;
+  --radius-lg:   24px;
+  --radius-xl:   32px;
+  --radius-2xl:  48px;
+  --radius-full: 9999px;
+
+  /* ── Typography ── */
+  --font-sans:     'Inter', 'Poppins', sans-serif;
+  --font-arabic:   'Cairo', 'Tajawal', sans-serif;
+  --font-display:  'Poppins', sans-serif;
+
+  --text-xs:   0.75rem;
+  --text-sm:   0.875rem;
+  --text-base: 1rem;
+  --text-lg:   1.125rem;
+  --text-xl:   1.25rem;
+  --text-2xl:  1.5rem;
+  --text-3xl:  1.875rem;
+  --text-4xl:  2.25rem;
+  --text-5xl:  3rem;
+  --text-6xl:  3.75rem;
+  --text-7xl:  4.5rem;
+
+  --weight-normal: 400;
+  --weight-medium: 500;
+  --weight-semi:   600;
+  --weight-bold:   700;
+  --weight-extra:  800;
+
+  /* ── Transitions ── */
+  --transition-fast:   150ms ease;
+  --transition-base:   250ms ease;
+  --transition-slow:   400ms ease;
+  --transition-spring: 350ms cubic-bezier(0.34,1.56,0.64,1);
+
+  /* ── Layout ── */
+  --container-max: 1280px;
+  --header-height: 80px;
+
+  /* ── Z-Index ── */
+  --z-header:    100;
+  --z-overlay:   200;
+  --z-modal:     300;
+  --z-tooltip:   400;
+}
+
+/* RTL overrides */
+[dir='rtl'] {
+  --font-sans: 'Cairo', 'Tajawal', sans-serif;
+  font-family: var(--font-arabic);
+}

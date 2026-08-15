@@ -1,0 +1,100 @@
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.booking-form__section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  padding: var(--space-6);
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: var(--radius-xl);
+}
+
+.booking-form__section-title {
+  font-size: var(--text-base);
+  font-weight: var(--weight-semi);
+  color: var(--color-text-secondary);
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.booking-form__row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-5);
+}
+
+@media (max-width: 768px) {
+  .booking-form__row { grid-template-columns: 1fr; }
+}
+
+.booking-form__estimate {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-5) var(--space-6);
+  border-radius: var(--radius-xl);
+  font-size: var(--text-lg);
+  color: var(--color-text-secondary);
+}
+
+.booking-form__estimate strong {
+  font-size: var(--text-2xl);
+  font-weight: var(--weight-extra);
+}
+
+.booking-form__submit {
+  width: 100%;
+  padding: var(--space-5) var(--space-8);
+  font-size: var(--text-lg);
+  font-weight: var(--weight-bold);
+  letter-spacing: 0.3px;
+  border-radius: var(--radius-xl);
+}
+
+/* ── Success State ── */
+.booking-success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-5);
+  padding: var(--space-16) var(--space-8);
+  border-radius: var(--radius-2xl);
+}
+
+.booking-success__icon {
+  color: var(--color-bright-aqua);
+  filter: drop-shadow(0 0 15px rgba(57,217,232,0.50));
+}
+
+.booking-success__title {
+  font-size: var(--text-2xl);
+  font-weight: var(--weight-bold);
+  color: white;
+}
+
+.booking-success__text {
+  color: var(--color-text-secondary);
+  font-size: var(--text-base);
+  line-height: 1.7;
+  max-width: 400px;
+}
+
+.form-error {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: var(--text-xs);
+  color: #FF7F74;
+  margin-top: var(--space-1);
+}
+
+textarea.glass-input {
+  resize: vertical;
+  min-height: 100px;
+}

@@ -1,0 +1,32 @@
+.trip-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+}
+
+.trip-grid__item {
+  display: flex;
+}
+
+.trip-grid__item .trip-card {
+  width: 100%;
+}
+
+.trip-grid__empty {
+  text-align: center;
+  padding: var(--space-16) var(--space-8);
+  color: var(--color-text-secondary);
+  border-radius: var(--radius-xl);
+  font-size: var(--text-lg);
+}
+
+@media (max-width: 1024px) {
+  .trip-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .trip-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-5);
+  }
+}

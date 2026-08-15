@@ -1,0 +1,173 @@
+.trips-page {
+  min-height: 100vh;
+  transition: background-color 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Smooth Atmosphere Transitions */
+.trips-hero__bg,
+.trips-hero__overlay,
+.trips-content {
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ── Hero Base ── */
+.trips-hero {
+  position: relative;
+  min-height: 380px;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: var(--space-16);
+  overflow: hidden;
+}
+
+.trips-hero__bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center 40%;
+  z-index: 0;
+}
+
+.trips-hero__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.trips-hero__content {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-5);
+  padding-top: calc(var(--header-height) + var(--space-12));
+}
+
+.trips-hero__title {
+  font-size: clamp(var(--text-3xl), 5vw, var(--text-5xl));
+  font-weight: var(--weight-extra);
+  color: white;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+}
+
+[dir='rtl'] .trips-hero__title { letter-spacing: 0; }
+
+.trips-hero__subtitle {
+  font-size: var(--text-lg);
+  color: rgba(255, 255, 255, 0.75);
+  max-width: 600px;
+  line-height: 1.7;
+}
+
+.trips-content {
+  min-height: 60vh;
+}
+
+/* ───────────────────────────────────────────
+   1. Normal / Sea Atmosphere (Default & Sea)
+   ─────────────────────────────────────────── */
+.trips-page--all .trips-hero__bg,
+.trips-page--sea .trips-hero__bg {
+  background-image: url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1920&q=85');
+}
+
+.trips-page--all .trips-hero__overlay,
+.trips-page--sea .trips-hero__overlay {
+  background: linear-gradient(
+    to bottom,
+    rgba(2, 25, 35, 0.82) 0%,
+    rgba(6, 59, 74, 0.70) 60%,
+    rgba(2, 20, 30, 0.95) 100%
+  );
+}
+
+.trips-page--all .trips-content,
+.trips-page--sea .trips-content {
+  background: linear-gradient(180deg, rgba(2, 20, 30, 0.98) 0%, rgba(6, 59, 74, 0.90) 100%);
+}
+
+/* ───────────────────────────────────────────
+   2. Desert & Safari Atmosphere (Golden Dunes & Sunset)
+   ─────────────────────────────────────────── */
+.trips-page--safari .trips-hero__bg {
+  background-image: url('/images/trips/desert-safari.jpg');
+}
+
+.trips-page--safari .trips-hero__overlay {
+  background: linear-gradient(
+    to bottom,
+    rgba(40, 18, 5, 0.85) 0%,
+    rgba(95, 45, 12, 0.75) 60%,
+    rgba(28, 12, 3, 0.98) 100%
+  );
+}
+
+.trips-page--safari .trips-content {
+  background: linear-gradient(180deg, rgba(28, 12, 3, 0.98) 0%, rgba(70, 32, 8, 0.92) 100%);
+}
+
+/* Warm Golden Glow for Safari Active Filter & Cards */
+.trips-page--safari .trip-filter-btn--active {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%) !important;
+  border-color: #fbbf24 !important;
+  box-shadow: 0 0 25px rgba(245, 158, 11, 0.65) !important;
+  color: #ffffff !important;
+}
+
+.trips-page--safari .section-tag {
+  background: rgba(251, 191, 36, 0.15);
+  color: #fbbf24;
+  border-color: rgba(251, 191, 36, 0.35);
+}
+
+.trips-page--safari .trip-card:hover {
+  border-color: rgba(251, 191, 36, 0.5) !important;
+  box-shadow: 0 10px 30px rgba(245, 158, 11, 0.25) !important;
+}
+
+/* ───────────────────────────────────────────
+   3. Transfer Atmosphere (Night Highway & Neon Car Ride)
+   ─────────────────────────────────────────── */
+.trips-page--transfer .trips-hero__bg {
+  background-image: url('/images/trips/airport-transfers.jpg');
+}
+
+.trips-page--transfer .trips-hero__overlay {
+  background: linear-gradient(
+    to bottom,
+    rgba(8, 12, 25, 0.88) 0%,
+    rgba(15, 23, 42, 0.80) 60%,
+    rgba(5, 8, 18, 0.98) 100%
+  );
+}
+
+.trips-page--transfer .trips-content {
+  background: linear-gradient(180deg, rgba(5, 8, 18, 0.98) 0%, rgba(15, 23, 42, 0.94) 100%);
+}
+
+/* Electric Blue / Neon Glow for Transfer Active Filter & Cards */
+.trips-page--transfer .trip-filter-btn--active {
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%) !important;
+  border-color: #60a5fa !important;
+  box-shadow: 0 0 25px rgba(59, 130, 246, 0.65) !important;
+  color: #ffffff !important;
+}
+
+.trips-page--transfer .section-tag {
+  background: rgba(56, 189, 248, 0.15);
+  color: #38bdf8;
+  border-color: rgba(56, 189, 248, 0.35);
+}
+
+.trips-page--transfer .trip-card:hover {
+  border-color: rgba(56, 189, 248, 0.5) !important;
+  box-shadow: 0 10px 30px rgba(56, 189, 248, 0.25) !important;
+}
+
+@media (max-width: 640px) {
+  .trips-hero { min-height: 280px; padding-bottom: var(--space-10); }
+  .trips-hero__title { font-size: var(--text-2xl); }
+}

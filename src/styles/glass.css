@@ -1,0 +1,173 @@
+/* ═══════════════════════════════════════════════════════════════
+   GLASSMORPHISM COMPONENT SYSTEM
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── Base Glass Panel ── */
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--glass-shadow);
+}
+
+.glass-strong {
+  background: var(--glass-bg-strong);
+  backdrop-filter: var(--glass-blur-strong);
+  -webkit-backdrop-filter: var(--glass-blur-strong);
+  border: 1px solid var(--glass-border-strong);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--glass-shadow-lg);
+}
+
+.glass-dark {
+  background: var(--glass-bg-dark);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid rgba(57,217,232,0.18);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--glass-shadow);
+}
+
+.glass-card {
+  background: var(--glass-bg-card);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--glass-shadow);
+  transition:
+    transform var(--transition-slow),
+    box-shadow var(--transition-slow),
+    border-color var(--transition-slow);
+  overflow: hidden;
+}
+
+.glass-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--glass-shadow-lg), var(--glass-glow);
+  border-color: rgba(57,217,232,0.45);
+}
+
+/* ── Glass Icon Circle ── */
+.glass-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-full);
+  background: rgba(57,217,232,0.15);
+  border: 1px solid rgba(57,217,232,0.30);
+  color: var(--color-bright-aqua);
+  flex-shrink: 0;
+  transition: all var(--transition-base);
+}
+
+.glass-icon-lg {
+  width: 70px;
+  height: 70px;
+}
+
+.glass-icon:hover {
+  background: rgba(57,217,232,0.25);
+  box-shadow: 0 0 20px rgba(57,217,232,0.30);
+}
+
+/* ── Glass Input ── */
+.glass-input {
+  width: 100%;
+  padding: var(--space-4) var(--space-5);
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text-primary);
+  font-size: var(--text-base);
+  transition: all var(--transition-base);
+  outline: none;
+}
+
+.glass-input::placeholder {
+  color: var(--color-text-muted);
+}
+
+.glass-input:focus {
+  border-color: var(--color-bright-aqua);
+  background: rgba(255,255,255,0.12);
+  box-shadow: 0 0 0 3px rgba(57,217,232,0.15);
+}
+
+.glass-input.error {
+  border-color: var(--color-cta);
+  box-shadow: 0 0 0 3px rgba(255,91,77,0.15);
+}
+
+/* ── Glass Select ── */
+.glass-select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='rgba(255,255,255,0.5)' stroke-width='2'><polyline points='6 9 12 15 18 9'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 44px;
+}
+
+[dir='rtl'] .glass-select {
+  background-position: left 14px center;
+  padding-right: var(--space-5);
+  padding-left: 44px;
+}
+
+/* ── Glass Label ── */
+.glass-label {
+  display: block;
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-2);
+}
+
+/* ── Glass Form Group ── */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.form-error {
+  font-size: var(--text-xs);
+  color: #FF7F74;
+  margin-top: var(--space-1);
+}
+
+/* ── Glass Container ── */
+.glass-section-container {
+  background: rgba(0,109,122,0.18);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(57,217,232,0.18);
+  border-radius: var(--radius-2xl);
+  box-shadow: 0 25px 80px rgba(0,0,0,0.35);
+  padding: var(--space-12);
+}
+
+@media (max-width: 768px) {
+  .glass-section-container { padding: var(--space-8) var(--space-5); border-radius: var(--radius-xl); }
+}
+
+/* ── Floating animation for cards ── */
+.float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.float-delay-1 { animation-delay: 1s; }
+.float-delay-2 { animation-delay: 2s; }
+.float-delay-3 { animation-delay: 3s; }
+
+/* ── Glow pulse ── */
+.pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
+}

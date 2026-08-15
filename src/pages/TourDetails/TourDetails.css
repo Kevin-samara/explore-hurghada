@@ -1,0 +1,375 @@
+.tour-page {
+  min-height: 100vh;
+  background: linear-gradient(180deg, rgba(2,20,30,0.98) 0%, rgba(6,59,74,0.90) 100%);
+}
+
+/* ── Hero ── */
+.tour-hero {
+  position: relative;
+  height: 480px;
+  overflow: hidden;
+}
+
+.tour-hero__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.4s ease;
+}
+
+.tour-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(2,20,30,0.50) 0%,
+    transparent 40%,
+    rgba(2,20,30,0.85) 100%
+  );
+}
+
+.tour-hero__back {
+  position: absolute;
+  top: calc(var(--header-height) + var(--space-6));
+  left: var(--space-8);
+  z-index: 10;
+}
+
+[dir='rtl'] .tour-hero__back {
+  left: unset;
+  right: var(--space-8);
+}
+
+/* ── Image nav ── */
+.tour-hero__nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.45);
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 50%;
+  color: white;
+  z-index: 10;
+  transition: all var(--transition-base);
+}
+
+.tour-hero__nav:hover {
+  background: rgba(0,184,200,0.45);
+  border-color: var(--color-ocean-cyan);
+}
+
+.tour-hero__nav--prev { left: var(--space-6); }
+.tour-hero__nav--next { right: var(--space-6); }
+
+[dir='rtl'] .tour-hero__nav--prev { left: unset; right: var(--space-6); }
+[dir='rtl'] .tour-hero__nav--next { right: unset; left: var(--space-6); }
+
+/* ── Hero info ── */
+.tour-hero__info {
+  position: absolute;
+  bottom: var(--space-8);
+  left: 0;
+  right: 0;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.tour-hero__title {
+  font-size: clamp(var(--text-2xl), 4vw, var(--text-4xl));
+  font-weight: var(--weight-extra);
+  color: white;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+}
+
+[dir='rtl'] .tour-hero__title { letter-spacing: 0; }
+
+.tour-hero__meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+  flex-wrap: wrap;
+}
+
+.tour-hero__rating {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: #FFD700;
+  font-weight: var(--weight-semi);
+  font-size: var(--text-sm);
+}
+
+.tour-hero__review-count {
+  color: rgba(255,255,255,0.60);
+  font-weight: var(--weight-normal);
+}
+
+.tour-hero__stat {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  color: rgba(255,255,255,0.75);
+}
+
+.tour-hero__stat svg { color: var(--color-bright-aqua); }
+
+/* ── Thumbnails ── */
+.tour-thumbnails {
+  background: rgba(2,20,30,0.92);
+  padding: var(--space-4) 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.tour-thumbnails__strip {
+  display: flex;
+  gap: var(--space-2);
+  overflow-x: auto;
+  scrollbar-width: none;
+  padding-bottom: var(--space-1);
+}
+
+.tour-thumbnails__strip::-webkit-scrollbar { display: none; }
+
+.tour-thumb {
+  flex-shrink: 0;
+  width: 80px;
+  height: 56px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 2px solid transparent;
+  transition: all var(--transition-base);
+  cursor: pointer;
+}
+
+.tour-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tour-thumb:hover { border-color: rgba(255,255,255,0.40); }
+.tour-thumb--active { border-color: var(--color-bright-aqua); box-shadow: 0 0 12px rgba(57,217,232,0.40); }
+
+/* ── Body ── */
+.tour-body {
+  padding: var(--space-10) 0 var(--space-16);
+}
+
+.tour-layout {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: var(--space-8);
+  align-items: start;
+}
+
+.tour-details-col {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.tour-section {
+  padding: var(--space-7);
+  border-radius: var(--radius-xl);
+}
+
+.tour-section__title {
+  font-size: var(--text-xl);
+  font-weight: var(--weight-bold);
+  color: white;
+  margin-bottom: var(--space-5);
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid rgba(255,255,255,0.10);
+}
+
+.tour-section__text {
+  font-size: var(--text-base);
+  color: var(--color-text-secondary);
+  line-height: 1.8;
+}
+
+/* ── Lists ── */
+.tour-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.tour-list__item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+}
+
+.tour-list__icon--check { color: #4CAF50; flex-shrink: 0; margin-top: 2px; }
+.tour-list__icon--x { color: var(--color-cta); flex-shrink: 0; margin-top: 2px; }
+
+/* ── Itinerary ── */
+.tour-itinerary {
+  display: flex;
+  flex-direction: column;
+}
+
+.tour-itinerary__step {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: var(--space-4);
+  padding-bottom: var(--space-6);
+}
+
+[dir='rtl'] .tour-itinerary__step {
+  direction: rtl;
+}
+
+.tour-itinerary__time-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.tour-itinerary__time {
+  font-size: var(--text-xs);
+  font-weight: var(--weight-semi);
+  color: var(--color-bright-aqua);
+  white-space: nowrap;
+  padding: var(--space-1) var(--space-3);
+  background: rgba(57,217,232,0.15);
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(57,217,232,0.25);
+}
+
+.tour-itinerary__line {
+  flex: 1;
+  width: 2px;
+  background: linear-gradient(to bottom, rgba(57,217,232,0.40), rgba(57,217,232,0.10));
+  border-radius: var(--radius-full);
+  min-height: var(--space-8);
+}
+
+.tour-itinerary__step-title {
+  font-size: var(--text-base);
+  font-weight: var(--weight-semi);
+  color: white;
+  margin-bottom: var(--space-2);
+}
+
+.tour-itinerary__step-desc {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  line-height: 1.7;
+}
+
+/* ── Times ── */
+.tour-times {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.tour-time-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-5);
+  border-radius: var(--radius-full);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  color: var(--color-bright-aqua);
+}
+
+/* ── Sidebar ── */
+.tour-sidebar {
+  position: sticky;
+  top: calc(var(--header-height) + var(--space-6));
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.tour-sidebar__card {
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.tour-sidebar__price {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.tour-sidebar__from {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+.tour-sidebar__amount {
+  font-size: var(--text-4xl);
+  font-weight: var(--weight-extra);
+  color: var(--color-bright-aqua);
+  line-height: 1;
+}
+
+.tour-sidebar__per {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+.tour-sidebar__info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-4) 0;
+  border-top: 1px solid rgba(255,255,255,0.10);
+  border-bottom: 1px solid rgba(255,255,255,0.10);
+}
+
+.tour-sidebar__info-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+}
+
+.tour-sidebar__info-item svg { color: var(--color-ocean-cyan); flex-shrink: 0; }
+
+.tour-sidebar__book-btn {
+  width: 100%;
+  padding: var(--space-4);
+  font-size: var(--text-base);
+  font-weight: var(--weight-bold);
+  border-radius: var(--radius-xl);
+}
+
+.tour-not-found {
+  background: linear-gradient(180deg, rgba(2,20,30,0.98) 0%, rgba(6,59,74,0.90) 100%);
+  min-height: 100vh;
+}
+
+@media (max-width: 1024px) {
+  .tour-layout { grid-template-columns: 1fr; }
+  .tour-sidebar { position: static; }
+  .tour-hero { height: 360px; }
+}
+
+@media (max-width: 640px) {
+  .tour-hero { height: 280px; }
+  .tour-hero__title { font-size: var(--text-xl); }
+  .tour-section { padding: var(--space-5); }
+  .tour-itinerary__step { grid-template-columns: 70px 1fr; }
+}
