@@ -9,7 +9,7 @@ interface TripFiltersProps {
   onChange: (cat: TripCategory) => void;
 }
 
-const CATEGORIES: TripCategory[] = ['all', 'sea', 'safari', 'transfer'];
+const CATEGORIES: TripCategory[] = ['all', 'sea', 'safari'];
 
 const TripFilters: React.FC<TripFiltersProps> = ({ active, onChange }) => {
   const { lang } = useLanguage();

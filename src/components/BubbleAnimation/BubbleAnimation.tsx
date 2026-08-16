@@ -3,8 +3,9 @@ import type { TripCategory } from '../../types';
 import './BubbleAnimation.css';
 
 interface BubbleAnimationProps {
-  mode?: TripCategory;
+  mode?: TripCategory | 'transfer';
 }
+
 
 const BubbleAnimation: React.FC<BubbleAnimationProps> = ({ mode = 'all' }) => {
   if (mode === 'safari') {

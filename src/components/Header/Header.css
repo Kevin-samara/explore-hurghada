@@ -225,6 +225,41 @@
   .header__hamburger { display: flex; }
 }
 
-@media (max-width: 480px) {
-  .header__logo-text { font-size: var(--text-lg); }
+@media (max-width: 600px) {
+  .header__inner {
+    padding: 0 var(--space-3);
+    gap: var(--space-2);
+  }
+
+  .header__actions .btn-cta {
+    display: none;
+  }
+
+  .header__actions {
+    gap: var(--space-2);
+  }
+
+  .header__logo {
+    gap: var(--space-2);
+  }
+
+  .header__logo-icon {
+    width: 34px;
+    height: 34px;
+  }
+
+  .header__logo-text {
+    font-size: clamp(0.85rem, 4vw, 1rem);
+  }
+
+  .header__hamburger {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+@media (max-width: 380px) {
+  .header__logo-text {
+    font-size: 0.82rem;
+  }
 }

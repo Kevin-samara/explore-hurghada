@@ -98,10 +98,15 @@ ul, ol {
   max-width: var(--container-max);
   margin: 0 auto;
   padding: 0 var(--space-6);
+  box-sizing: border-box;
 }
 
 @media (max-width: 768px) {
   .container { padding: 0 var(--space-4); }
+}
+
+@media (max-width: 480px) {
+  .container { padding: 0 12px; }
 }
 
 /* ── Section ── */
@@ -110,8 +115,13 @@ ul, ol {
 }
 
 @media (max-width: 768px) {
-  .section { padding: var(--space-16) 0; }
+  .section { padding: var(--space-12) 0; }
 }
+
+@media (max-width: 480px) {
+  .section { padding: var(--space-8) 0; }
+}
+
 
 /* ── Fade-in Animations ── */
 .fade-in {
@@ -218,6 +228,18 @@ ul, ol {
   padding: var(--space-4) var(--space-8);
   font-size: var(--text-lg);
 }
+
+@media (max-width: 480px) {
+  .btn {
+    font-size: 0.9rem;
+    padding: var(--space-2) var(--space-5);
+  }
+  .btn-lg {
+    padding: var(--space-3) var(--space-6);
+    font-size: 0.95rem;
+  }
+}
+
 
 /* ── Keyframes ── */
 @keyframes float {

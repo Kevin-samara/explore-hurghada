@@ -1,6 +1,6 @@
 export type Language = 'en' | 'ar';
 
-export type TripCategory = 'all' | 'sea' | 'safari' | 'transfer';
+export type TripCategory = 'all' | 'sea' | 'safari';
 
 export interface ItineraryItem {
   time: string;
@@ -51,17 +51,23 @@ export interface Testimonial {
 }
 
 export interface BookingFormData {
+  bookingType: 'trip' | 'transfer';
   fullName: string;
   phone: string;
   email: string;
   adults: number;
   children: number;
   tripId: string;
+  transferPickup: string;
+  transferDestination: string;
+  vehicleType: 'sedan' | 'van';
+  flightNumber: string;
   date: string;
   time: string;
   hotel: string;
   notes: string;
 }
+
 
 export interface SiteConfig {
   whatsappNumber: string;

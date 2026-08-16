@@ -37,3 +37,20 @@
 .section-title--center .section-title__subtitle {
   margin: 0 auto;
 }
+
+@media (max-width: 600px) {
+  .section-title {
+    margin-bottom: var(--space-8);
+  }
+
+  .section-title__heading {
+    font-size: clamp(1.35rem, 5.5vw, 1.85rem);
+    margin-bottom: var(--space-2);
+  }
+
+  .section-title__subtitle {
+    font-size: 0.88rem;
+    line-height: 1.6;
+  }
+}
+

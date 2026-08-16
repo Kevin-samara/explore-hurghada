@@ -37,8 +37,8 @@ const translations: Record<Language, TranslationDict> = {
         all: 'All',
         sea: 'Sea Activities',
         safari: 'Desert & Safari',
-        transfer: 'Transfer',
       },
+
       noResults: 'No trips found for this category.',
       from: 'From',
       perPerson: 'per person',
@@ -215,8 +215,8 @@ const translations: Record<Language, TranslationDict> = {
         all: 'الكل',
         sea: 'الأنشطة البحرية',
         safari: 'الصحراء والسفاري',
-        transfer: 'انتقالات',
       },
+
       noResults: 'لا توجد رحلات في هذه الفئة.',
       from: 'يبدأ من',
       perPerson: 'للشخص',

@@ -35,3 +35,11 @@
   color: var(--glass-border);
   font-weight: var(--weight-normal);
 }
+
+@media (max-width: 600px) {
+  .lang-switcher {
+    padding: 4px 8px;
+    font-size: 0.78rem;
+    gap: 4px;
+  }
+}
