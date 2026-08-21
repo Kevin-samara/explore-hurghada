@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Anchor } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { useLanguage } from '../../hooks/useLanguage';
 import { t } from '../../i18n/translations';
 import { useScrollHeader } from '../../hooks/useScrollHeader';
@@ -30,9 +30,7 @@ const Header: React.FC = () => {
         <div className="container header__inner">
           {/* Logo */}
           <Link to="/" className="header__logo" onClick={() => setMenuOpen(false)}>
-            <div className="header__logo-icon">
-              <Anchor size={22} />
-            </div>
+            <img src="/logo.jpg" alt="Explore Hurghada" className="header__logo-img" />
             <span className="header__logo-text">
               {lang === 'ar' ? 'استكشف الغردقة' : 'Explore Hurghada'}
             </span>
@@ -75,9 +73,7 @@ const Header: React.FC = () => {
           <div className="mobile-menu__overlay" onClick={() => setMenuOpen(false)} />
           <nav className="mobile-menu__panel glass-strong">
             <div className="mobile-menu__header">
-              <div className="header__logo-icon">
-                <Anchor size={20} />
-              </div>
+              <img src="/logo.jpg" alt="Explore Hurghada" className="header__logo-img" />
               <span className="header__logo-text">
                 {lang === 'ar' ? 'استكشف الغردقة' : 'Explore Hurghada'}
               </span>

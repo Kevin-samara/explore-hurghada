@@ -12,8 +12,8 @@ const siteConfig: SiteConfig = {
   address: 'Hurghada, Red Sea Governorate, Egypt',
   addressAr: 'الغردقة، محافظة البحر الأحمر، مصر',
   social: {
-    facebook: 'https://facebook.com/explorehurghada',
-    instagram: 'https://instagram.com/explorehurghada',
+    facebook: 'https://www.facebook.com/profile.php?id=61590514058615&sk',
+    instagram: 'https://www.instagram.com/explore.hurghada.24',
     tripadvisor: 'https://tripadvisor.com',
   },
   stats: {
