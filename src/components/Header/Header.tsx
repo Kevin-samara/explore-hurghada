@@ -5,6 +5,7 @@ import { useLanguage } from '../../hooks/useLanguage';
 import { t } from '../../i18n/translations';
 import { useScrollHeader } from '../../hooks/useScrollHeader';
 import LanguageSwitcher from '../LanguageSwitcher/LanguageSwitcher';
+import logoImg from '../../assets/logo.jpg';
 import './Header.css';
 
 const Header: React.FC = () => {
@@ -30,7 +31,7 @@ const Header: React.FC = () => {
         <div className="container header__inner">
           {/* Logo */}
           <Link to="/" className="header__logo" onClick={() => setMenuOpen(false)}>
-            <img src="/logo.jpg" alt="Explore Hurghada" className="header__logo-img" />
+            <img src={logoImg} alt="Explore Hurghada" className="header__logo-img" />
             <span className="header__logo-text">
               {lang === 'ar' ? 'استكشف الغردقة' : 'Explore Hurghada'}
             </span>
@@ -73,7 +74,7 @@ const Header: React.FC = () => {
           <div className="mobile-menu__overlay" onClick={() => setMenuOpen(false)} />
           <nav className="mobile-menu__panel glass-strong">
             <div className="mobile-menu__header">
-              <img src="/logo.jpg" alt="Explore Hurghada" className="header__logo-img" />
+              <img src={logoImg} alt="Explore Hurghada" className="header__logo-img" />
               <span className="header__logo-text">
                 {lang === 'ar' ? 'استكشف الغردقة' : 'Explore Hurghada'}
               </span>

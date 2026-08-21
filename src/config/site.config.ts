@@ -3,12 +3,12 @@ import type { SiteConfig } from '../types';
 const siteConfig: SiteConfig = {
   // ────────────────────────────────────────
   // Change your WhatsApp number here ONLY
-  whatsappNumber: '+201206821203',
+  whatsappNumber: '+201201987880',
   // ────────────────────────────────────────
   companyName: 'Explore Hurghada',
   companyNameAr: 'استكشف الغردقة',
-  email: 'info@explorehurghada.com',
-  phone: '+201206821203',
+  email: 'explore.hurghada.24@gmail.com',
+  phone: '+201201987880',
   address: 'Hurghada, Red Sea Governorate, Egypt',
   addressAr: 'الغردقة، محافظة البحر الأحمر، مصر',
   social: {

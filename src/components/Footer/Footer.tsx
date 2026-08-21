@@ -5,6 +5,7 @@ import { useLanguage } from '../../hooks/useLanguage';
 import { t } from '../../i18n/translations';
 import siteConfig from '../../config/site.config';
 import LanguageSwitcher from '../LanguageSwitcher/LanguageSwitcher';
+import logoImg from '../../assets/logo.jpg';
 import './Footer.css';
 
 const FacebookIcon = ({ size = 18 }: { size?: number }) => (
@@ -41,7 +42,7 @@ const Footer: React.FC = () => {
             {/* Brand */}
             <div className="footer__brand">
               <Link to="/" className="footer__logo">
-                <img src="/logo.jpg" alt="Explore Hurghada" className="header__logo-img" />
+                <img src={logoImg} alt="Explore Hurghada" className="header__logo-img" />
                 <span className="footer__logo-text">
                   {lang === 'ar' ? 'استكشف الغردقة' : 'Explore Hurghada'}
                 </span>
